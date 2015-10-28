@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    non-secure-port: 8761
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+       defaultZone: http://localhost:8761/eureka/
+  
+logging:
+  level:
+    org.hibernate: ERROR
+    org.springframeworK: DEBUG
+    
