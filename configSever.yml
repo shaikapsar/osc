@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: sandbox
+    
+---
+spring:
+  profiles: sandbox
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.org/shaikapsar/scrap-config
+          username: oyescrap@hotmail.com
+          password: Abc.12345
+server:
+  port: 8888
+
+---
+spring:
+  profiles: cloud
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.org/shaikapsar/scrap-config
+          username: oyescrap@hotmail.com
+          password: Abc.12345
+          
+server:
+  port: 8888
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.org/shaikapsar/scrap-config
+          username: oyescrap@hotmail.com
+          password: Abc.12345
+          
+server:
+  port: 8888
